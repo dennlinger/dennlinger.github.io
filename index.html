@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis Aumiller</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .nav-link {
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        section {
+            padding: 60px 0;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2d3748;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -35px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-content {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            color: #718096;
+            margin-bottom: 10px;
+        }
+
+        .timeline-desc {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .highlights {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .highlights li {
+            margin-bottom: 5px;
+            color: #4a5568;
+            position: relative;
+        }
+
+        .highlights li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .social-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .publications {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .publication {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .pub-authors {
+            color: #718096;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .pub-venue {
+            display: inline-block;
+            background: #e6f0ff;
+            color: #2563eb;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .pub-links {
+            margin-top: 15px;
+        }
+
+        .pub-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        .pub-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 30px;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-dot {
+                left: -30px;
+                width: 16px;
+                height: 16px;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="aumiller-24.png" alt="Dennis Aumiller" class="profile-img">
+            <h1>Dennis Aumiller</h1>
+            <p class="tagline">Research Scientist with a PhD in Computer Science, working on human-centric evaluation of LLM capabilities</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#socials" class="nav-link">Connect</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Research Scientist with a PhD in Computer Science, working on human-centric evaluation of LLM capabilities. Creator of multiple domain-specific benchmarks, with focus on practical relevance. Experience as both an individual research lead and supervisor for research projects across the broader space of LLM applications.</p>
+                <p>As a top contributor on Stackoverflow, I've reached more than 1.5 million people to date with my technical insights and solutions.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">09/2023 -- present</div>
+                        <div class="timeline-title">Member of Technical Staff</div>
+                        <div class="timeline-company">Cohere -- Remote from Philadelphia, PA</div>
+                        <ul class="highlights">
+                            <li>Core team member for North Mini Code, contributor to Command model family since Command R</li>
+                            <li>Research lead for Cohere's human annotation efforts, introducing internal benchmarks for text, vision, agentic coding, and audio evaluations</li>
+                            <li>Instigated multiple projects to reduce the average annotation handling time by over 30% while increasing annotation consistency</li>
+                            <li>Co-maintainer of our internal "eval-as-a-service" framework, used across the broader modeling organization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">08/2021 -- 12/2021</div>
+                        <div class="timeline-title">Applied Scientist Intern</div>
+                        <div class="timeline-company">Amazon -- Berlin, Germany</div>
+                        <ul class="highlights">
+                            <li>Training Seq2Seq networks to improve result coverage on long-tail query recommendations to 100%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">09/2019 -- 01/2021</div>
+                        <div class="timeline-title">Founding Engineer (Part-time)</div>
+                        <div class="timeline-company">Codefy GmbH -- Heidelberg, Germany</div>
+                        <ul class="highlights">
+                            <li>Co-leading the implementation of a legal document search solution, securing 200,000€ in seed funding</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/2018 -- 09/2018</div>
+                        <div class="timeline-title">Software Engineering Intern</div>
+                        <div class="timeline-company">SAP -- Walldorf, Germany</div>
+                        <ul class="highlights">
+                            <li>Researching and implementing randomized matrix decomposition algorithms resulting in 1000x speedup</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2 class="section-title">Select Publications</h2>
+            <div class="publications">
+                <div class="publication">
+                    <div class="pub-title">Divide, Evaluate, and Conquer: Checklists Improve AI Feedback</div>
+                    <div class="pub-authors">J. Cook, T. Rocktäschel, J. Foerster, D. Aumiller*, A. Wang*</div>
+                    <span class="pub-venue">Under submission</span>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-title">How Does Quantization Affect Multilingual LLMs?</div>
+                    <div class="pub-authors">K. Marchisio, S. Dash, H. Chen, D. Aumiller, A. Üstün, S. Hooker, S. Ruder</div>
+                    <span class="pub-venue">EMNLP 2024</span>
+                </div>
+
+                <div class="publication">
+                    <div class="pub-title">EUR-Lex-Sum: A Multilingual Dataset for Long-form Text Summarization</div>
+                    <div class="pub-authors">D. Aumiller*, A. Chouhan*, M. Gertz</div>
+                    <span class="pub-venue">EMNLP 2022</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="socials">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="socials">
+                <a href="mailto:dennis.aumiller@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>dennis.aumiller@gmail.com</span>
+                </a>
+                <a href="https://github.com/dennlinger" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://scholar.google.de/citations?hl=en&pli=1&user=ABsoIlgAAAAJ" class="social-link" target="_blank">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Google Scholar</span>
+                </a>
+                <a href="https://stackoverflow.com/users/3607203/dennlinger" class="social-link" target="_blank">
+                    <i class="fab fa-stack-overflow"></i>
+                    <span>Stack Overflow</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dennis Aumiller. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
