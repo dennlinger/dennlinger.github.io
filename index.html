@@ -260,8 +260,27 @@
             margin-bottom: 8px;
         }
 
-        .pub-links {
-            margin-top: 12px;
+        .publication {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .publication:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .publication a:hover {
+            text-decoration: underline;
+        }
+
+        .pub-title a {
+            color: #2d3748;
         }
 
         .pub-link {
@@ -495,77 +514,27 @@
         <section id="blog">
             <h2 class="section-title">Blog</h2>
             <div class="publications">
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/stackoverflow.html">Reflections on Reaching 1 Million People on Stackoverflow</a></div>
+                <div class="publication" onclick="window.location.href='/blog/stackoverflow.html'" onkeypress="window.location.href='/blog/stackoverflow.html'" role="button" tabindex="0">
+                    <div class="pub-title"><a href="/blog/stackoverflow.html">Reflections on Reaching 1 Million People on Stackoverflow</a></div>
                     <div class="pub-authors">November 6, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/stackoverflow.html" class="pub-link">Read Article →</a>
-                    </div>
                 </div>
 
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/green-card.html">Filing for a Spousal Green Card from Abroad, An Experience Report</a></div>
+                <div class="publication" onclick="window.location.href='/blog/green-card.html'" onkeypress="window.location.href='/blog/green-card.html'" role="button" tabindex="0">
+                    <div class="pub-title"><a href="/blog/green-card.html">Filing for a Spousal Green Card from Abroad, An Experience Report</a></div>
                     <div class="pub-authors">August 24, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/green-card.html" class="pub-link">Read Article →</a>
-                    </div>
                 </div>
 
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/cohere-summarization.html">Cohere Summarization</a></div>
-                    <div class="pub-authors">June 24, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/cohere-summarization.html" class="pub-link">Read Article →</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/big_model_inference.html">A Brief How-To on Local Inference for extremely Large Language Models</a></div>
-                    <div class="pub-authors">January 22, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/big_model_inference.html" class="pub-link">Read Article →</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/the-internet-forgets.html">The Internet Forgets</a></div>
+                <div class="publication" onclick="window.location.href='/blog/i-suck-at-networking.html'" onkeypress="window.location.href='/blog/i-suck-at-networking.html'" role="button" tabindex="0">
+                    <div class="pub-title"><a href="/blog/i-suck-at-networking.html">I Suck at Networking</a></div>
                     <div class="pub-authors">June 14, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/the-internet-forgets.html" class="pub-link">Read Article →</a>
-                    </div>
                 </div>
 
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/data-care.html">Data Care: Working with Sensitive Data</a></div>
-                    <div class="pub-authors">June 24, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/data-care.html" class="pub-link">Read Article →</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/effective-supervision.html">Effective Supervision</a></div>
-                    <div class="pub-authors">June 24, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/effective-supervision.html" class="pub-link">Read Article →</a>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/i-suck-at-networking.html">I Suck at Networking</a></div>
+                <div class="publication" onclick="window.location.href='/blog/the-internet-forgets.html'" onkeypress="window.location.href='/blog/the-internet-forgets.html'" role="button" tabindex="0">
+                    <div class="pub-title"><a href="/blog/the-internet-forgets.html">The Internet Forgets</a></div>
                     <div class="pub-authors">June 14, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/i-suck-at-networking.html" class="pub-link">Read Article →</a>
-                    </div>
                 </div>
 
-                <div class="publication">
-                    <div class="pub-title"><a href="/new-website/blog/new-website.html">New Website Announcement</a></div>
-                    <div class="pub-authors">June 14, 2023</div>
-                    <div class="pub-links">
-                        <a href="/new-website/blog/new-website.html" class="pub-link">Read Article →</a>
-                    </div>
-                </div>
+
             </div>
         </section>
     </main>

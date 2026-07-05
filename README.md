@@ -16,12 +16,7 @@ I have migrated and added my old blog posts from my previous website:
 
 - [Reflections on Reaching 1 Million People on Stackoverflow](/blog/stackoverflow.html) - November 6, 2023
 - [Filing for a Spousal Green Card from Abroad, An Experience Report](/blog/green-card.html) - August 24, 2023
-- [Cohere Summarization](/blog/cohere-summarization.html) - June 24, 2023
-- [Big Model Inference](/blog/big_model_inference.html) - January 22, 2023
-- [The Internet Forgets](/blog/the-internet-forgets.html) - June 14, 2023
-- [Data Care: Working with Sensitive Data](/blog/data-care.html) - June 24, 2023
-- [Effective Supervision](/blog/effective-supervision.html) - June 24, 2023
 - [I Suck at Networking](/blog/i-suck-at-networking.html) - June 14, 2023
-- [New Website Announcement](/blog/new-website.html) - June 14, 2023
+- [The Internet Forgets](/blog/the-internet-forgets.html) - June 14, 2023
 
 [See all blog posts](/blog/) →
