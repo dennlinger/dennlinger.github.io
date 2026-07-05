@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Supervision - Dennis Aumiller</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .blog-nav {
+            background: #333;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .blog-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .blog-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .blog-nav a:hover {
+            background: #555;
+        }
+        
+        .post-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .post-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .post-meta {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+        
+        .post-content {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .post-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: #333;
+        }
+        
+        .post-content h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 10px;
+            color: #444;
+        }
+        
+        .post-content p {
+            margin-bottom: 20px;
+        }
+        
+        .post-content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .post-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .post-content code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .post-content pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .post-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 30px 0;
+        }
+        
+        .tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .back-to-blog:hover {
+            background: #764ba2;
+        }
+        
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-nav">
+        <ul>
+            <li><a href="https://dennis-aumiller.de/">Home</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="https://dennis-aumiller.de/#about">About</a></li>
+        </ul>
+    </div>
+    
+    <header class="post-header">
+        <h1>Effective Supervision</h1>
+        <div class="post-meta">Posted on 2022-08-09</div>
+    </header>
+    
+    <div class="container">
+        <div class="post-content">
+<p>Talk about processes that I have ensured for effective supervision.</p>
+
+
+<p>What are the main goals that students should learn about (IMO)?
+What are the expectations we have?</p>
+
+
+<p>How can students collaborate efficiently with teachers?</p>
+
+
+<p>Mention "Making of a Manager" by Julie Zhou as inspiration</p>
+
+
+<p>How do "academic supervision meetings" differ from industry leadership?
+    - Freedom (of choice/for students) has to be reflected. Instead of making top-down decisions, asking "how do YOU think we should proceed?" is a much more valuable insight.
+    - Having fixed deadlines and "small chunks" tasks is much harder; tasks are often undefined and time estimates are even harder than in regular SDE cycles.
+    - Very little background on which students you should take on. We use practicals as a pipeline for theses, but then again, we don't have much choice at our institution. Even so, a structured application process and (individual) contribution lists are essential.</p>
+            <a href="/blog.html" class="back-to-blog">← Back to Blog</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Dennis Aumiller. All rights reserved.</p>
+    </footer>
+</body>
+</html>
